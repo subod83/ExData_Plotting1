@@ -1,5 +1,5 @@
-#Load data from file
-dataproj <- fread("./ExploratoryDataAnalysis/Proj1/household_power_consumption.txt", sep = ";", na.strings = c("?"), nrows = 2075259,header = TRUE, verbose=TRUE)
+#Load data from file, presuming data file in home directory
+dataproj <- fread("./household_power_consumption.txt", sep = ";", na.strings = c("?"), nrows = 2075259,header = TRUE, verbose=TRUE)
 
 #Fix ? values to NA
 dataproj[dataproj == "?"] <- NA
